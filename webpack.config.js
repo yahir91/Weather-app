@@ -9,19 +9,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
-  module:{
-  rules: [
-    {
-      test: /\.m?js$/,
-      exclude: /(node_modules|bower_components)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
-        }
-      }
-    },
-    {
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
         test: /\.html$/i,
         loader: 'html-loader',
       },
@@ -39,24 +39,24 @@ module.exports = {
           },
         ],
       },
-    {
+      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
-        {
+          {
             loader: 'file-loader',
-        },
-    ]
-    }
-  ],
-},
+          },
+        ],
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
-        filename: './index.html',
-      }),
+      template: './src/index.html',
+      filename: './index.html',
+    }),
     new MiniCssExtractPlugin({
-        filename: '[name].css',
-        chunkFilename: '[id].css',
-      }),
-  ]
-}
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
+};
