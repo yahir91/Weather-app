@@ -12,20 +12,21 @@
     "url": "git+https://github.com/yahir91/Weather-app.git"
   },
   "author": "Yahir Cardona",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/yahir91/Weather-app/issues"
   },
   "homepage": "https://github.com/yahir91/Weather-app#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.10",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^4.5.0",
-    "mini-css-extract-plugin": "^1.3.3",
-    "webpack": "^5.10.1",
-    "webpack-cli": "^4.2.0"
+    "html-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^1.3.5",
+    "webpack": "^5.20.2",
+    "webpack-cli": "^4.5.0"
   }
 }
