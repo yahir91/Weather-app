@@ -9,21 +9,24 @@
 - HTML5 
 - CSS3
 - Openweathermap API
-- Webpach
+- Webpack
 
 #### Livedemo
-- [GitHub Pages]()
+- [Live Demo](https://confident-golick-379bdb.netlify.app/)
 
 
 ## Getting started
-- run `git clone https://github.com/Ceci007/weather-app.git`;
+- run `git clone git@github.com:yahir91/yahir-cardona.github.io.git`;
 - run `npm install`
 - run `npm run build`
-- open `dist/index.html` with you favorite browser.
+- open `dist/index.html`
 
+## How to use
+- Write the city you want to see the forecast.
+- Press enter and see the results.
 
 ## Author
-👤 [Cecilia Benitez](https://github.com/Ceci007)
+- [Yahir Cardona](https://yahir91.github.io/yahir-cardona.github.io/)
 
 
 ## Contributing
