@@ -1,32 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>OpenWeatherMap Api</title>
 </head>
 <body>
-  <!-- <div class="main">
-    <div class="header">
-      <h1>OpenWeatherMap API</h1>
-      <p>Enter any city name in the input box below to get the data</p>
-    </div> -->
-  
-    <div class="input">
-      <input type="text" placeholder="Enter the city" class="input_text">
-      <input type="submit" value="Submit" class="submit">
-    </div>
-  </div>
-
   <div class="container">
-    <div class="card">
-      <h1 class="name" id="name"></h1>
-      <p class="temp"></p>
-      <p class="clouds"></p>
-      <p class="desc"></p>
+    <div class="header">
+      <div class="icon-container">
+        <canvas id="icon" width="100" height="100"></canvas>
+      </div>
+    </div>
+    <div class="content">
+      <div class="general-information">
+        <div class="status" data-status>Enter A Location</div>
+        <div class="location" data-location>To Find The Weather</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail">
+          <div class="title">Wind</div>
+          <div class="value" data-wind>TBD</div>
+        </div>
+        <div class="detail bordered">
+            <div class="title">Temperature</div>
+          <div class="value" data-temperature>TBD</div>
+        </div>
+        <div class="detail">
+          <div class="title">Precipitation</div>
+          <div class="value" data-precipitation>TBD</div>
+        </div>
+      </div>
+      <div class="city-search-container">
+        <input type="text" class="city-search" data-city-search placeholder="Enter Location">
+      </div>
     </div>
   </div>
+  <a href="https://darksky.net/poweredby" class="darksky-logo">Powered By Dark Sky</a>
 </body>
 </html>
