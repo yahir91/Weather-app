@@ -1,5 +1,3 @@
-import putData from './fetchData.js'
-
 let input = document.querySelector('.input_text');
 let button= document.querySelector('.submit');
 let main = document.querySelector('#name');
@@ -22,7 +20,7 @@ button.addEventListener('click', () => {
         let tempCelcius = parseInt(tempValue -273.15, 10) 
         main.innerHTML = nameValue;
         desc.innerHTML = descValue;
-        temp.innerHTML = "Temp - "+tempCelcius+"C";
+        temp.innerHTML = "Temp - "+tempCelcius+"`C";
     }).catch(err => alert("Wrong city name!"));
     console.log(obj.main)
     input.value = ""
