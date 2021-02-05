@@ -6,7 +6,7 @@ const input = document.querySelector('[data-city-search]');
 const locationElement = document.querySelector('[data-location]')
 const statusElement = document.querySelector('[data-status]')
 const temperatureElement = document.querySelector('[data-temperature]')
-// const precipitationElement = document.querySelector('[data-precipitation]')
+const rainElement = document.querySelector('[data-precipitation]')
 const windElement = document.querySelector('[data-wind]')
 
 const apiKey = '0e2959b47fb2ec863a63504b4e25870a';
@@ -20,11 +20,13 @@ input.addEventListener('click', () => {
       const nameValue = data.name;
       const descValue = data.weather[0].description;
       const tempCelcius = parseInt(tempValue - 273.15, 10);
-      const windValue = data.wind.windspeed;
+      const windValue = data['wind']['speed'];
+      const rainValue = data['clouds']['all'];
       locationElement.textContent = nameValue;
       statusElement.textContent = descValue;
       temperatureElement.textContent = `Temp - ${tempCelcius} C`;
-      windElement.textContent = windValue;
+      windElement.textContent = windValue + 'm/s';
+      rainElement.textContent = rainValue + '%';
     });
   input.value = '';
 });
