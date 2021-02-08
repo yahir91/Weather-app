@@ -1,11 +1,13 @@
-import {tempCelcius, convert} from './updateData.js'
+import {temperatureElement, convert} from './updateData.js'
 
-// export const convert = document.querySelector('#convert');
-console.log(convert)
 convert.addEventListener("click", ()=> {
-    console.log(3)
-    tempFarenheit = parseInt(tempCelcius*(9/5) + 32,10)
-    console.log(3)
-    temperatureElement.textContent = `Temp - ${tempFarenheit} C`;
-})
-
+    const temp = temperatureElement.textContent.match(/-?\d+/g).map(Number);
+    if (temperatureElement.textContent.match('C')){
+    const tempFarenheit = parseInt(temp*(9/5) + 32, 10)
+    
+    temperatureElement.textContent = `Temp ${tempFarenheit} F`;
+  } else {
+    const tempCelcius = parseInt((temp - 32)*(5/9), 10)
+    temperatureElement.textContent = `Temp ${tempCelcius} C`;
+  }
+  })

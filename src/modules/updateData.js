@@ -2,7 +2,7 @@
 const input = document.querySelector('[data-city-search]');
 const locationElement = document.querySelector('[data-location]');
 const statusElement = document.querySelector('[data-status]');
-export const temperatureElement = document.querySelector('[data-temperature]');
+const temperatureElement = document.querySelector('[data-temperature]');
 const rainElement = document.querySelector('[data-precipitation]');
 const windElement = document.querySelector('[data-wind]');
 const convert = document.querySelector('#convert');
@@ -23,27 +23,15 @@ input.addEventListener('keypress', e => {
         const rainValue = data.clouds.all;
         locationElement.textContent = nameValue;
         statusElement.textContent = descValue;
-        temperatureElement.textContent = `Temp - ${tempCelcius} C`;
+        temperatureElement.textContent = `Temp ${tempCelcius} C`;
         windElement.textContent = `${windValue}m/s`;
         rainElement.textContent = `${rainValue}%`;
       });
     input.value = '';
-    console.log(convert)
   }
 });
 
-convert.addEventListener("click", ()=> {
-  const temp = temperatureElement.textContent.match(/\d+/)[0]
-  if (temperatureElement.textContent.match('C')){
-  const tempFarenheit = parseInt(temp*(9/5) + 32, 10)
-  temperatureElement.textContent = `Temp - ${tempFarenheit} F`;
-} else {
-  const tempCelcius = parseInt((temp - 32)*(5/9), 10)
-  temperatureElement.textContent = `Temp - ${tempCelcius} C`;
+export {
+  convert,
+  temperatureElement
 }
-})
-
-// export {
-//   celcius,
-//   convert
-// }
