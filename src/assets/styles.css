@@ -6,7 +6,7 @@
 }
 
 .default {
-  background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35));
+  /* background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35)); */
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@
 }
 
 .rain {
-  background-image: url('../assets/img/rain.jpg');
+  background-image: url('../assets/img/rain.jpeg');
 }
 
 .smoke {
@@ -63,12 +63,34 @@
   justify-content: center;
 }
 
-.farenheit input {
-  width: 50px;
-  height: 30px;
-  border: none;
-  background: none;
+.farenheit button {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:black;
+  text-align:center;
+  transition: all 0.2s;
 }
+/* a.button1{
+   display:inline-block;
+   padding:0.35em 1.2em;
+   border:0.1em solid #FFFFFF;
+   margin:0 0.3em 0.3em 0;
+   border-radius:0.12em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   font-weight:300;
+   color:#FFFFFF;
+   text-align:center;
+   transition: all 0.2s;
+  } */
 
 .header {
   background-color: #222;

@@ -28,23 +28,24 @@ input.addEventListener('keypress', e => {
         temperatureElement.textContent = `Temp ${tempCelcius} C`;
         windElement.textContent = `${windValue}m/s`;
         rainElement.textContent = `${rainValue}%`;
-        switch (weatherId[0]) {
-          case 2:
+        console.log(String(weatherId)[0])
+        switch (String(weatherId)[0]) {
+          case '2':
             body.classList.add('thunder');
             break;
-          case 3:
+          case '3':
             body.classList.add('drizzle');
             break;
-          case 5:
+          case '5':
             body.classList.add('rain');
             break;
-          case 6:
+          case '6':
             body.classList.add('snow');
             break;
-          case 7:
+          case '7':
             body.classList.add('smoke')
             break;
-          case 8:
+          case '8':
             body.classList.add('cloud')
         }
       });
