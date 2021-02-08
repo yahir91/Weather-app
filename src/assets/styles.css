@@ -28,6 +28,19 @@ body {
   margin-top: 50px;
 }
 
+.farenheit {
+  margin :0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.farenheit input {
+  width: 50px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
 .header {
   background-color: #222;
   height: 120px;

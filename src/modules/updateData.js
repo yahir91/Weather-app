@@ -1,13 +1,11 @@
+// import convert from './Tooggle.js'
 const input = document.querySelector('[data-city-search]');
-// const button = document.querySelector('.submit');
-// const main = document.querySelector('#name');
-// const temp = document.querySelector('[data-temperature]');
-// const desc = document.querySelector('.desc');
 const locationElement = document.querySelector('[data-location]');
 const statusElement = document.querySelector('[data-status]');
-const temperatureElement = document.querySelector('[data-temperature]');
+export const temperatureElement = document.querySelector('[data-temperature]');
 const rainElement = document.querySelector('[data-precipitation]');
 const windElement = document.querySelector('[data-wind]');
+const convert = document.querySelector('#convert');
 
 const apiKey = '0e2959b47fb2ec863a63504b4e25870a';
 
@@ -20,7 +18,7 @@ input.addEventListener('keypress', e => {
         const tempValue = data.main.temp;
         const nameValue = data.name;
         const descValue = data.weather[0].description;
-        const tempCelcius = parseInt(tempValue - 273.15, 10);
+        var tempCelcius = parseInt(tempValue - 273.15, 10);
         const windValue = data.wind.speed;
         const rainValue = data.clouds.all;
         locationElement.textContent = nameValue;
@@ -30,5 +28,22 @@ input.addEventListener('keypress', e => {
         rainElement.textContent = `${rainValue}%`;
       });
     input.value = '';
+    console.log(convert)
   }
 });
+
+convert.addEventListener("click", ()=> {
+  const temp = temperatureElement.textContent.match(/\d+/)[0]
+  if (temperatureElement.textContent.match('C')){
+  const tempFarenheit = parseInt(temp*(9/5) + 32, 10)
+  temperatureElement.textContent = `Temp - ${tempFarenheit} F`;
+} else {
+  const tempCelcius = parseInt((temp - 32)*(5/9), 10)
+  temperatureElement.textContent = `Temp - ${tempCelcius} C`;
+}
+})
+
+// export {
+//   celcius,
+//   convert
+// }
