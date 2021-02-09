@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Gotham Rounded', sans-serif;
+}
+
+.default {
+  /* background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35)); */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  background-image: url(e5861704f0974c9c0531e46f5fe8776f.jpg);
+}
+
+.cloud {
+  background-image: url(713335c432982b472016a66fd04d051c.jpg);
+}
+
+.drizzle {
+  background-image: url(1d2841512c26ff08b497461944a409b3.jpg);
+}
+
+.rain {
+  background-image: url(d2d44924de4cb43b8b1caba38b4f582c.jpeg);
+}
+
+.smoke {
+  background-image: url(5fcc49e40962466e7d0a880392d3297e.jpg);
+}
+
+.snow{
+  background-image: url(bc81f45fdbb122c3ad5e3008e7ce0a5e.jpg);
+}
+
+.thunder {
+  background-image: url(204eaa80a9ce8accfd48646c066cfc9e.jpeg);
+}
+
+.container {
+  max-width: 90%;
+  width: 1200px;
+  background-color: white;
+  box-shadow: 0 5px 10px black;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.farenheit {
+  margin :0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.farenheit button {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:black;
+  text-align:center;
+  transition: all 0.2s;
+}
+/* a.button1{
+   display:inline-block;
+   padding:0.35em 1.2em;
+   border:0.1em solid #FFFFFF;
+   margin:0 0.3em 0.3em 0;
+   border-radius:0.12em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   font-weight:300;
+   color:#FFFFFF;
+   text-align:center;
+   transition: all 0.2s;
+  } */
+
+.header {
+  background-color: #222;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+.icon-container {
+  position: relative;
+  top: 70px;
+  padding: 20px;
+  background-color: white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.general-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.status {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.detail-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.detail.bordered {
+  border-left: 1px solid #777;
+  border-right: 1px solid #777;
+}
+
+.detail .title {
+  font-size: 2rem;
+  flex-grow: 1;
+  font-weight: bold;
+  color: #777;
+}
+
+.detail .value {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.city-search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.city-search {
+  margin-top: 40px;
+  font-size: 2rem;
+  outline: none;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.pac-item {
+  font-size: 2rem;
+  padding: 10px 10px;
+}
+
+.pac-icon {
+  display: none;
+}
+
+.pac-item-query {
+  font-size: 2rem;
+  padding-right: 14px;
+}
+
+.darksky-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
